@@ -1,16 +1,18 @@
-import { Nunito } from 'next/font/google'
 import '@/app/global.css'
+import { AppContextProvider } from './AppContext'
 
 const RootLayout = ({ children }) => {
     return (
-        <html lang="en">
-            <body className="w-screen h-screen">{children}</body>
+        <html lang="es">
+            <body className="w-full h-screen overflow-y-auto">
+                <AppContextProvider>{children}</AppContextProvider>
+            </body>
         </html>
     )
 }
 
 export const metadata = {
-    title: 'Laravel',
+    title: 'KEAI',
 }
 
 export default RootLayout
